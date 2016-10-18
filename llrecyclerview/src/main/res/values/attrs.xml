@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LLRecyclerView">
+        <attr name="recyclerViewClipToPadding" format="boolean" />
+        <attr name="recyclerViewPadding" format="dimension" />
+        <attr name="recyclerViewPaddingTop" format="dimension" />
+        <attr name="recyclerViewPaddingBottom" format="dimension" />
+        <attr name="recyclerViewPaddingLeft" format="dimension" />
+        <attr name="recyclerViewPaddingRight" format="dimension" />
+        <attr name="recyclerViewEmptyView" format="reference" />
+        <attr name="recyclerViewFloatingActionView" format="reference" />
+        <attr name="recyclerViewScrollbars" format="enum">
+            <enum name="none" value="0" />
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
+        <attr name="recyclerViewDefaultSwipeColor" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="plusIconColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="addButtonColorPressed" format="color" />
+        <attr name="addButtonColorNormal" format="color" />
+        <attr name="addButtonPlusIconColor" format="color" />
+        <attr name="addButtonIsHorizontal" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatActionButton">
+        <attr name="urv_fab_colorPressed" format="color" />
+        <attr name="urv_fab_colorNormal" format="color" />
+        <attr name="urv_fab_alphaPressed" format="float" />
+        <attr name="urv_fab_alphaNormal" format="float" />
+        <attr name="icon" />
+        <attr name="urv_fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+            <enum name="noshadow" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
