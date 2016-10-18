@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
@@ -9,7 +8,7 @@ android {
         minSdkVersion 18
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     buildTypes {
         release {
@@ -25,6 +24,29 @@ dependencies {
     compile "com.android.support:recyclerview-v7:24.2.1"
     compile 'in.srain.cube:ultra-ptr:1.0.11'
 }
+ext {
+    bintrayRepo = 'maven'////bintray
+    bintrayName = 'llrecyclerview'//bintray
 
-def siteUrl = 'https://github.com/zhengxiaopeng/BounceProgressBar' // 项目的主页
-def gitUrl = 'https://github.com/zhengxiaopeng/BounceProgressBar.git' // Git仓库的url
+    publishedGroupId = 'com.leo.lu'
+    artifact = 'llrecyclerview'
+
+    siteUrl = 'https://github.com/han361769045/LLRecyclerView'
+    gitUrl = 'https://github.com/han361769045/LLRecyclerView.git'
+
+    libraryVersion = '1.0.0'
+    libraryName = 'llrecyclerview'
+    libraryDescription = 'A tool for Android'
+
+    developerId = 'leolu'
+    developerName = 'leolu'
+    developerEmail = '361769045@qq.moe'
+
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from:'https://raw.githubusercontent.com/Jude95/JCenter/master/install.gradle'
+apply from:'https://raw.githubusercontent.com/Jude95/JCenter/master/bintray.gradle'
