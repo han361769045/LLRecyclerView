@@ -35,7 +35,7 @@ if you want to use more link UltimateRecyclerView website:[https://github.com/cy
     //your code
     llRecyclerView = findViewById(R.id.ll_recycler_view);
     llRecyclerView.setAdapter(myAdapter);
-   
+    enableLoadMore();
     refreshingMaterial();
   }
     
