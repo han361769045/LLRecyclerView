@@ -41,7 +41,7 @@ if you want to use more link UltimateRecyclerView website:[https://github.com/cy
     
     //set loadmore
     public void enableLoadMore() {
-        ultimateRecyclerView.setOnLoadMoreListener(new LLRecyclerView.OnLoadMoreListener() {
+        llRecyclerView.setOnLoadMoreListener(new LLRecyclerView.OnLoadMoreListener() {
             @Override
             public void loadMore(int itemsCount, final int maxLastVisiblePosition) {
                 if (myAdapter.getItems().size() >= myAdapter.getTotal()) {
