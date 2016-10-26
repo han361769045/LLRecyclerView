@@ -13,7 +13,7 @@ if you want to use more link UltimateRecyclerView website:[https://github.com/cy
 
 # Dependency
 ```groove
- compile 'com.leo.lu:llrecyclerview:1.0.0'
+ compile 'com.leo.lu:llrecyclerview:1.0.1'
 ```
 
 # Usage
