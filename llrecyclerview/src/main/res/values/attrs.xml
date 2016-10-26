@@ -33,7 +33,7 @@
         <attr name="urv_fab_colorNormal" format="color" />
         <attr name="urv_fab_alphaPressed" format="float" />
         <attr name="urv_fab_alphaNormal" format="float" />
-        <attr name="icon" />
+        <attr name="icon" format="reference"/>
         <attr name="urv_fab_size" format="enum">
             <enum name="normal" value="0" />
             <enum name="mini" value="1" />
