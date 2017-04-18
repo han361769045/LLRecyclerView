@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Parcelable;
 import android.support.annotation.ColorInt;
@@ -74,6 +75,7 @@ public class LLRecyclerView extends FrameLayout implements Scrollable {
     protected int mPaddingBottom;
     protected int mPaddingLeft;
     protected int mPaddingRight;
+    protected Drawable drawable;
     //protected int mEmptyViewPolicy;
     protected boolean mClipToPadding;
     private LLRecyclerViewAdapter mAdapter;
@@ -171,6 +173,7 @@ public class LLRecyclerView extends FrameLayout implements Scrollable {
         inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.ll_recycler_view_layout, this);
         mPtrFrameLayout = (PtrFrameLayout) view.findViewById(R.id.store_house_ptr_frame);
+        mPtrFrameLayout.setBackground(getBackground());
         mRecyclerView = (RecyclerView) view.findViewById(R.id.ll_recycler_view);
         setScrollbars();
         if (mRecyclerView != null) {
@@ -179,6 +182,9 @@ public class LLRecyclerView extends FrameLayout implements Scrollable {
                 mRecyclerView.setPadding(mPadding, mPadding, mPadding, mPadding);
             } else {
                 mRecyclerView.setPadding(mPaddingLeft, mPaddingTop, mPaddingRight, mPaddingBottom);
+            }
+            if (drawable != null) {
+                mRecyclerView.setBackground(drawable);
             }
         }
 
@@ -382,6 +388,10 @@ public class LLRecyclerView extends FrameLayout implements Scrollable {
             int colorList = typedArray.getResourceId(R.styleable.LLRecyclerView_recyclerViewDefaultSwipeColor, 0);
             if (colorList != 0) {
                 defaultSwipeToDismissColors = getResources().getIntArray(colorList);
+            }
+
+            if (typedArray.hasValue(R.styleable.LLRecyclerView_recyclerViewBackgroundColor)) {
+                drawable = typedArray.getDrawable(R.styleable.LLRecyclerView_recyclerViewBackgroundColor);
             }
             //mEmptyViewPolicy = EMPTY_VIEW_POLICY_EMPTY_SHOW;
         } finally {

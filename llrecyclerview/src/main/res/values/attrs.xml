@@ -15,6 +15,9 @@
             <enum name="vertical" value="1" />
             <enum name="horizontal" value="2" />
         </attr>
+
+        <attr name="recyclerViewBackgroundColor" format="color|reference"/>
+        
         <attr name="recyclerViewDefaultSwipeColor" format="reference"/>
     </declare-styleable>
 
